@@ -7,8 +7,8 @@
 import { useRouter } from 'next/navigation'
 
 const C = {
-  secondary: '#8A9BB8',
-  muted:     '#5A7090',
+  secondary: '#5C6B52',
+  muted:     '#9AA38D',
 } as const
 
 export function BackButton() {

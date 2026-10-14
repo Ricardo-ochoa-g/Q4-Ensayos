@@ -10,11 +10,11 @@ const C = {
   canvas:       '#F0F2F6',
   card:         '#FFFFFF',
   border:       '#E2E8F0',
-  textPrimary:  '#0F1A2E',
+  textPrimary:  '#F3F1EA',
   textSec:      '#64748B',
   textMuted:    '#94A3B8',
-  orange:       '#E5501E',
-  orangeFaint:  'rgba(229,80,30,0.06)',
+  orange:       '#5B7444',
+  orangeFaint:  'rgba(91, 116, 68,0.06)',
   blue:         '#1D4ED8',
   blueFaint:    'rgba(29,78,216,0.06)',
   blueBorder:   '#BFDBFE',
@@ -147,7 +147,7 @@ function EditableCell({
         fontStyle: value ? 'normal' : 'italic',
         ...style,
       }}
-      onMouseEnter={e => (e.currentTarget.style.background = 'rgba(229,80,30,0.05)')}
+      onMouseEnter={e => (e.currentTarget.style.background = 'rgba(91, 116, 68,0.05)')}
       onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
     >
       {value || placeholder}

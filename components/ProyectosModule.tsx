@@ -11,12 +11,12 @@ const C = {
   canvas:        '#F0F2F6',
   card:          '#FFFFFF',
   border:        '#E2E8F0',
-  textPrimary:   '#0F1A2E',
+  textPrimary:   '#F3F1EA',
   textSec:       '#64748B',
   textMuted:     '#94A3B8',
-  orange:        '#E5501E',
-  orangeFaint:   'rgba(229, 80, 30, 0.06)',
-  orangeBorder:  'rgba(229, 80, 30, 0.22)',
+  orange:        '#5B7444',
+  orangeFaint:   'rgba(91, 116, 68, 0.06)',
+  orangeBorder:  'rgba(91, 116, 68, 0.22)',
   success:       '#16A34A',
   successBg:     '#F0FDF4',
   successBorder: '#BBF7D0',
@@ -218,7 +218,7 @@ const TH: React.CSSProperties = {
   textTransform: 'uppercase', letterSpacing: '0.06em',
 }
 const TD: React.CSSProperties = {
-  padding: '8px 12px', fontSize: 12, color: '#0F1A2E',
+  padding: '8px 12px', fontSize: 12, color: '#F3F1EA',
 }
 
 // ─── Section title ────────────────────────────────────────────────────────────
@@ -396,7 +396,7 @@ function RetentionKpi({
             padding: '3px 11px', fontSize: 10, fontWeight: 600, cursor: 'pointer',
             border: 'none', outline: 'none',
             color: tipo === t ? '#fff' : C.textMuted,
-            background: tipo === t ? (t === 'factura' ? '#1C2D5A' : C.textSec) : 'transparent',
+            background: tipo === t ? (t === 'factura' ? '#3A4A2E' : C.textSec) : 'transparent',
             transition: 'all 0.12s',
           }}>
             {t === 'factura' ? 'Factura' : 'Boleta'}
@@ -916,7 +916,7 @@ function DetailPanel({
                                 border: 'none', outline: 'none',
                                 color: tipo === t ? '#fff' : C.textMuted,
                                 background: tipo === t
-                                  ? (t === 'factura' ? '#1C2D5A' : C.textSec)
+                                  ? (t === 'factura' ? '#3A4A2E' : C.textSec)
                                   : 'transparent',
                                 transition: 'all 0.12s',
                               }}
@@ -1123,7 +1123,7 @@ function DetailPanel({
 const SEL: React.CSSProperties = {
   height: 38, padding: '0 10px',
   border: `1px solid ${C.border}`, borderRadius: 8,
-  fontSize: 13, color: '#0F1A2E',
+  fontSize: 13, color: '#F3F1EA',
   background: '#FFFFFF', outline: 'none',
   cursor: 'pointer', flexShrink: 0,
 }
@@ -1227,7 +1227,7 @@ export function ProyectosModule({ projects }: Props) {
                   cursor: 'pointer', transition: 'all 0.15s',
                 }}>
                   <div style={{ fontSize: isMobile ? 16 : 20, fontWeight: 700, color: isActive ? '#fff' : s.color, lineHeight: 1 }}>{s.value}</div>
-                  <div style={{ fontSize: 9, color: isActive ? 'rgba(255,255,255,0.8)' : C.textMuted, textTransform: 'uppercase', letterSpacing: '0.05em', marginTop: 2 }}>
+                  <div style={{ fontSize: 9, color: isActive ? 'rgba(0, 0, 0,0.8)' : C.textMuted, textTransform: 'uppercase', letterSpacing: '0.05em', marginTop: 2 }}>
                     {s.label}
                   </div>
                 </button>

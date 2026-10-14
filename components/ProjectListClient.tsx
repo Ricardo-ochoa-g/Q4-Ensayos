@@ -9,19 +9,19 @@ import type { ProjectStats } from '@/types/project'
 
 // ─── Palette constants ────────────────────────────────────────────────────────
 const C = {
-  canvas:    '#0F1A2E',
-  surface:   '#162138',
-  card:      '#1D2D47',
-  cardHov:   '#243558',
-  orange:    '#E5501E',
-  primary:   '#F0EDE8',
-  secondary: '#8A9BB8',
-  muted:     '#5A7090',
+  canvas:    '#F3F1EA',
+  surface:   '#F8F6F0',
+  card:      '#FBFAF6',
+  cardHov:   '#FFFFFF',
+  orange:    '#5B7444',
+  primary:   '#2B2F24',
+  secondary: '#5C6B52',
+  muted:     '#9AA38D',
   success:   '#3D8B5E',
   warning:   '#D4A017',
   danger:    '#C0392B',
-  border:    'rgba(255,255,255,0.08)',
-  borderSt:  'rgba(255,255,255,0.13)',
+  border:    'rgba(0, 0, 0,0.08)',
+  borderSt:  'rgba(0, 0, 0,0.13)',
 } as const
 
 // ─── EP Tracker Compact ───────────────────────────────────────────────────────
@@ -229,7 +229,7 @@ function ColumnHeader({
         className="text-[10px] px-1.5 py-0.5 rounded transition-colors"
         style={{
           color: active ? C.primary : C.muted,
-          background: active ? 'rgba(255,255,255,0.08)' : 'transparent',
+          background: active ? 'rgba(0, 0, 0,0.08)' : 'transparent',
         }}
       >
         {children}
@@ -503,8 +503,8 @@ export function ProjectListClient({ projects, stats }: Props) {
             viewBox="0 0 16 16"
             fill="none"
           >
-            <circle cx="7" cy="7" r="5.5" stroke="#5A7090" strokeWidth="1.5" />
-            <path d="M11 11l3 3" stroke="#5A7090" strokeWidth="1.5" strokeLinecap="round" />
+            <circle cx="7" cy="7" r="5.5" stroke="#9AA38D" strokeWidth="1.5" />
+            <path d="M11 11l3 3" stroke="#9AA38D" strokeWidth="1.5" strokeLinecap="round" />
           </svg>
           <input
             type="text"

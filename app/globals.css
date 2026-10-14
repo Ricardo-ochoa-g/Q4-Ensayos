@@ -7,21 +7,21 @@
    ─────────────────────────────────────────────────────────────────────────── */
 
 @theme {
-  /* Surfaces — dark navy canvas, elevation by lightness */
-  --color-canvas:    #0F1A2E;
-  --color-surface:   #162138;
-  --color-surface-1: #1D2D47;
-  --color-surface-2: #243558;
+  /* Surfaces — pearl white canvas, elevation by lightness */
+  --color-canvas:    #F3F1EA;
+  --color-surface:   #F8F6F0;
+  --color-surface-1: #FBFAF6;
+  --color-surface-2: #FFFFFF;
 
   /* Brand */
-  --color-orange:    #E5501E;
-  --color-orange-hover: #F06030;
-  --color-navy:      #1C2D5A;
+  --color-orange:    #5B7444;
+  --color-orange-hover: #6E8955;
+  --color-navy:      #3A4A2E;
 
   /* Text hierarchy */
-  --color-primary:   #F0EDE8;
-  --color-secondary: #8A9BB8;   /* spec "text muted" — metadata, labels */
-  --color-muted:     #5A7090;   /* disabled, placeholder */
+  --color-primary:   #2B2F24;
+  --color-secondary: #5C6B52;   /* spec "text muted" — metadata, labels */
+  --color-muted:     #9AA38D;   /* disabled, placeholder */
 
   /* Semantic */
   --color-success:   #3D8B5E;
@@ -29,8 +29,8 @@
   --color-danger:    #C0392B;
 
   /* Borders (use as opacity-aware bg) */
-  --color-border:    rgba(255,255,255,0.08);
-  --color-border-strong: rgba(255,255,255,0.14);
+  --color-border:    rgba(0, 0, 0, 0.08);
+  --color-border-strong: rgba(0, 0, 0, 0.14);
 
   /* Typography */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
@@ -39,8 +39,8 @@
 
 /* Base */
 body {
-  background-color: #0F1A2E;
-  color: #F0EDE8;
+  background-color: #F3F1EA;
+  color: #2B2F24;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

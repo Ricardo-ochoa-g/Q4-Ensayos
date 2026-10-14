@@ -14,12 +14,12 @@ const C = {
   canvas:  '#F0F2F6',
   card:    '#FFFFFF',
   border:  '#E2E8F0',
-  text:    '#0F1A2E',
+  text:    '#F3F1EA',
   textSec: '#64748B',
   textMt:  '#94A3B8',
-  orange:  '#E5501E',
+  orange:  '#5B7444',
   orangeL: '#FFF5F2',
-  navy:    '#0F1A2E',
+  navy:    '#F3F1EA',
   blue:    '#0284C7',
   pub:     '#2563EB',
   pubL:    '#EFF6FF',
@@ -316,7 +316,7 @@ function PendienteTable({
             {title}
           </span>
           {hasEdits && !editing && (
-            <span style={{ fontSize: 9, background: 'rgba(255,255,255,0.2)', color: '#fff', borderRadius: 4, padding: '2px 7px', fontWeight: 700 }}>
+            <span style={{ fontSize: 9, background: 'rgba(0, 0, 0,0.2)', color: '#fff', borderRadius: 4, padding: '2px 7px', fontWeight: 700 }}>
               {items.length} proyectos
             </span>
           )}
@@ -324,7 +324,7 @@ function PendienteTable({
         <div style={{ display: 'flex', gap: 8 }}>
           {editing ? (
             <>
-              <button onClick={cancel} style={{ fontSize: 11, padding: '5px 12px', borderRadius: 6, border: '1px solid rgba(255,255,255,0.3)', background: 'transparent', color: '#fff', cursor: 'pointer', fontWeight: 600 }}>
+              <button onClick={cancel} style={{ fontSize: 11, padding: '5px 12px', borderRadius: 6, border: '1px solid rgba(0, 0, 0,0.3)', background: 'transparent', color: '#fff', cursor: 'pointer', fontWeight: 600 }}>
                 Cancelar
               </button>
               <button onClick={save} style={{ fontSize: 11, padding: '5px 14px', borderRadius: 6, border: 'none', background: '#fff', color: C.orange, cursor: 'pointer', fontWeight: 800 }}>
@@ -332,7 +332,7 @@ function PendienteTable({
               </button>
             </>
           ) : (
-            <button onClick={startEdit} style={{ fontSize: 11, padding: '5px 12px', borderRadius: 6, border: '1px solid rgba(255,255,255,0.3)', background: 'transparent', color: '#fff', cursor: 'pointer', fontWeight: 600, display: 'flex', alignItems: 'center', gap: 5 }}>
+            <button onClick={startEdit} style={{ fontSize: 11, padding: '5px 12px', borderRadius: 6, border: '1px solid rgba(0, 0, 0,0.3)', background: 'transparent', color: '#fff', cursor: 'pointer', fontWeight: 600, display: 'flex', alignItems: 'center', gap: 5 }}>
               ✏ Editar
             </button>
           )}

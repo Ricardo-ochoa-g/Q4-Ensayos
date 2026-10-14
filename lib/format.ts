@@ -18,16 +18,16 @@ export function getStatusStyle(status: string): {
   bg: string
   label: string
 } {
-  if (!status) return { color: '#8A9BB8', bg: 'rgba(138,155,184,0.12)', label: 'Sin estado' }
+  if (!status) return { color: '#5C6B52', bg: 'rgba(138,155,184,0.12)', label: 'Sin estado' }
   if (/finalizado/i.test(status))
     return { color: '#3D8B5E', bg: 'rgba(61,139,94,0.12)', label: 'Finalizado' }
   if (/revisi[oó]n|subsanaci[oó]n/i.test(status))
     return { color: '#D4A017', bg: 'rgba(212,160,23,0.12)', label: status }
   if (/proceso|dise[nñ]o/i.test(status))
-    return { color: '#E5501E', bg: 'rgba(229,80,30,0.12)', label: status }
+    return { color: '#5B7444', bg: 'rgba(91, 116, 68,0.12)', label: status }
   if (/espera|documentaci[oó]n/i.test(status))
     return { color: '#D4A017', bg: 'rgba(212,160,23,0.12)', label: status }
-  return { color: '#8A9BB8', bg: 'rgba(138,155,184,0.12)', label: status }
+  return { color: '#5C6B52', bg: 'rgba(138,155,184,0.12)', label: status }
 }
 
 export function sumPending(projects: { pending: number | null }[]): number {

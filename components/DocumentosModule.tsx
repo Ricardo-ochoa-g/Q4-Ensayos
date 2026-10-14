@@ -9,10 +9,10 @@ const C = {
   canvas:       '#F0F2F6',
   card:         '#FFFFFF',
   border:       '#E2E8F0',
-  textPrimary:  '#0F1A2E',
+  textPrimary:  '#F3F1EA',
   textSec:      '#64748B',
   textMuted:    '#94A3B8',
-  orange:       '#E5501E',
+  orange:       '#5B7444',
   success:      '#16A34A',
   successBg:    '#F0FDF4',
   successBorder:'#BBF7D0',
@@ -86,7 +86,7 @@ function Pill({ label, count, active, color, onClick }: { label: string; count?:
     }}>
       {label}
       {count !== undefined && (
-        <span style={{ background: active ? 'rgba(255,255,255,0.25)' : C.listBg, color: active ? '#fff' : C.textMuted, borderRadius: 10, padding: '1px 6px', fontSize: 10 }}>
+        <span style={{ background: active ? 'rgba(0, 0, 0,0.25)' : C.listBg, color: active ? '#fff' : C.textMuted, borderRadius: 10, padding: '1px 6px', fontSize: 10 }}>
           {count}
         </span>
       )}
@@ -150,7 +150,7 @@ function EditableCell({
         fontStyle: value ? 'normal' : 'italic',
         ...style,
       }}
-      onMouseEnter={e => (e.currentTarget.style.background = 'rgba(229,80,30,0.05)')}
+      onMouseEnter={e => (e.currentTarget.style.background = 'rgba(91, 116, 68,0.05)')}
       onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
     >
       {value || placeholder}

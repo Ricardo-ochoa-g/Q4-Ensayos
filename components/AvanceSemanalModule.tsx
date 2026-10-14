@@ -9,12 +9,12 @@ const C = {
   canvas:  '#F0F2F6',
   card:    '#FFFFFF',
   border:  '#E2E8F0',
-  text:    '#0F1A2E',
+  text:    '#F3F1EA',
   textSec: '#64748B',
   textMt:  '#94A3B8',
-  orange:  '#E5501E',
+  orange:  '#5B7444',
   orangeL: '#FFF5F2',
-  navy:    '#0F1A2E',
+  navy:    '#F3F1EA',
   blue:    '#2563EB',
   blueL:   '#EFF6FF',
   listBg:  '#F8FAFC',
@@ -234,12 +234,12 @@ function cellHtml(col: Column, rawValue: string): string {
 function buildWeekHtml(mes: string, week: Week): string {
   const rows = nonEmptyRows(week)
   const thStyle = 'background:#2563EB;color:#ffffff;padding:8px 10px;text-align:left;border:1px solid #1D4ED8;font-family:Arial,sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.03em;'
-  const tdStyle = 'padding:8px 10px;border:1px solid #E2E8F0;font-family:Arial,sans-serif;font-size:13px;color:#0F1A2E;'
+  const tdStyle = 'padding:8px 10px;border:1px solid #E2E8F0;font-family:Arial,sans-serif;font-size:13px;color:#F3F1EA;'
   const header = `<tr>${week.columns.map(c => `<th style="${thStyle}">${escapeHtml(c.label || '—')}</th>`).join('')}</tr>`
   const body = rows.map((r, i) =>
     `<tr>${week.columns.map(c => `<td style="${tdStyle}background:${i % 2 === 0 ? '#ffffff' : '#FAFBFD'};">${cellHtml(c, r.values[c.id] ?? '')}</td>`).join('')}</tr>`
   ).join('')
-  const title = `<div style="font-family:Arial,sans-serif;font-size:13px;font-weight:700;color:#0F1A2E;margin-bottom:8px;">Semana ${escapeHtml(week.label || '—')} — ${escapeHtml(mes)}</div>`
+  const title = `<div style="font-family:Arial,sans-serif;font-size:13px;font-weight:700;color:#F3F1EA;margin-bottom:8px;">Semana ${escapeHtml(week.label || '—')} — ${escapeHtml(mes)}</div>`
   return `${title}<table style="border-collapse:collapse;">${header}${body}</table>`
 }
 
@@ -310,7 +310,7 @@ function SemaforoCell({ value, onChange }: { value: string; onChange: (v: string
             style={{
               width: 16, height: 16, borderRadius: '50%', flexShrink: 0, padding: 0, cursor: 'pointer',
               background: opt.color,
-              border: active ? '2px solid #0F1A2E' : '1px solid rgba(0,0,0,0.12)',
+              border: active ? '2px solid #F3F1EA' : '1px solid rgba(0,0,0,0.12)',
               boxShadow: active ? '0 0 0 2px rgba(15,26,46,0.12)' : 'none',
               opacity: active ? 1 : 0.35,
             }}
@@ -421,7 +421,7 @@ function WeekBlock({ mes, week, onChange, onDelete }: {
           <thead>
             <tr>
               {week.columns.map(col => (
-                <th key={col.id} style={{ background: C.blue, padding: locked ? '9px 10px' : '4px 4px 4px 10px', textAlign: 'left', borderRight: '1px solid rgba(255,255,255,0.15)' }}>
+                <th key={col.id} style={{ background: C.blue, padding: locked ? '9px 10px' : '4px 4px 4px 10px', textAlign: 'left', borderRight: '1px solid rgba(0, 0, 0,0.15)' }}>
                   {locked ? (
                     <span style={{ fontSize: 10, fontWeight: 800, color: '#fff', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                       {col.label || '—'}
@@ -439,7 +439,7 @@ function WeekBlock({ mes, week, onChange, onDelete }: {
                         }}
                       />
                       {week.columns.length > 1 && (
-                        <button onClick={() => removeColumn(col.id)} style={{ border: 'none', background: 'none', cursor: 'pointer', color: 'rgba(255,255,255,0.6)', fontSize: 14, lineHeight: 1, padding: '0 4px' }}>
+                        <button onClick={() => removeColumn(col.id)} style={{ border: 'none', background: 'none', cursor: 'pointer', color: 'rgba(0, 0, 0,0.6)', fontSize: 14, lineHeight: 1, padding: '0 4px' }}>
                           ×
                         </button>
                       )}
@@ -527,10 +527,10 @@ function MonthCard({ mes, data, onChange, onDelete, onExportPdf }: {
       <div style={{ background: C.navy, padding: '12px 20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <span style={{ fontSize: 16, fontWeight: 900, color: '#fff', textTransform: 'uppercase', letterSpacing: '0.07em' }}>{mes}</span>
         <div style={{ display: 'flex', gap: 8 }}>
-          <button onClick={onExportPdf} style={{ fontSize: 11, padding: '5px 12px', borderRadius: 6, border: '1px solid rgba(255,255,255,0.3)', background: 'transparent', color: '#fff', cursor: 'pointer', fontWeight: 600 }}>
+          <button onClick={onExportPdf} style={{ fontSize: 11, padding: '5px 12px', borderRadius: 6, border: '1px solid rgba(0, 0, 0,0.3)', background: 'transparent', color: '#fff', cursor: 'pointer', fontWeight: 600 }}>
             ⭳ Exportar PDF
           </button>
-          <button onClick={onDelete} style={{ fontSize: 11, padding: '5px 10px', borderRadius: 6, border: '1px solid rgba(255,255,255,0.3)', background: 'transparent', color: 'rgba(255,255,255,0.7)', cursor: 'pointer', fontWeight: 600 }}>
+          <button onClick={onDelete} style={{ fontSize: 11, padding: '5px 10px', borderRadius: 6, border: '1px solid rgba(0, 0, 0,0.3)', background: 'transparent', color: 'rgba(0, 0, 0,0.7)', cursor: 'pointer', fontWeight: 600 }}>
             Eliminar mes
           </button>
           <button onClick={addWeek} style={{ fontSize: 11, padding: '5px 12px', borderRadius: 6, border: 'none', background: C.orange, color: '#fff', cursor: 'pointer', fontWeight: 700 }}>

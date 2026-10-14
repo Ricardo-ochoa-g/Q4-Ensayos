@@ -16,18 +16,18 @@ import type { ProjectDetail, EP, Expense } from '@/types/project'
 
 // ─── Palette ──────────────────────────────────────────────────────────────────
 const C = {
-  canvas:    '#0F1A2E',
-  surface:   '#162138',
-  card:      '#1D2D47',
-  orange:    '#E5501E',
-  primary:   '#F0EDE8',
-  secondary: '#8A9BB8',
-  muted:     '#5A7090',
+  canvas:    '#F3F1EA',
+  surface:   '#F8F6F0',
+  card:      '#FBFAF6',
+  orange:    '#5B7444',
+  primary:   '#2B2F24',
+  secondary: '#5C6B52',
+  muted:     '#9AA38D',
   success:   '#3D8B5E',
   warning:   '#D4A017',
   danger:    '#C0392B',
-  border:    'rgba(255,255,255,0.08)',
-  borderSt:  'rgba(255,255,255,0.13)',
+  border:    'rgba(0, 0, 0,0.08)',
+  borderSt:  'rgba(0, 0, 0,0.13)',
 } as const
 
 // ─── EP Tracker — vertical road ───────────────────────────────────────────────
@@ -142,7 +142,7 @@ function ExpenseTable({ expenses }: { expenses: Expense[] }) {
             <tr
               key={i}
               className="border-b"
-              style={{ borderColor: 'rgba(255,255,255,0.04)' }}
+              style={{ borderColor: 'rgba(0, 0, 0,0.04)' }}
             >
               <td className="py-1.5 pr-4" style={{ color: C.primary }}>
                 {e.description}
@@ -203,7 +203,7 @@ function TaxTable({ expenses }: { expenses: Expense[] }) {
           {taxed.map((e, i) => (
             <tr
               key={i}
-              style={{ borderBottom: `1px solid rgba(255,255,255,0.04)` }}
+              style={{ borderBottom: `1px solid rgba(0, 0, 0,0.04)` }}
             >
               <td className="py-1.5 pr-4" style={{ color: C.primary }}>
                 {e.description}
@@ -311,7 +311,7 @@ export default async function ProyectoDetailPage({
                 className="text-[10px] font-medium px-2 py-0.5 rounded-full"
                 style={{
                   color: C.secondary,
-                  background: 'rgba(255,255,255,0.06)',
+                  background: 'rgba(0, 0, 0,0.06)',
                   border: `1px solid ${C.border}`,
                 }}
               >
@@ -339,8 +339,8 @@ export default async function ProyectoDetailPage({
           <div
             className="col-span-2 md:col-span-1 row-span-2 rounded-xl p-4 flex flex-col justify-between"
             style={{
-              background: hasPending ? 'rgba(229,80,30,0.07)' : C.surface,
-              border: `1px solid ${hasPending ? 'rgba(229,80,30,0.28)' : C.border}`,
+              background: hasPending ? 'rgba(91, 116, 68,0.07)' : C.surface,
+              border: `1px solid ${hasPending ? 'rgba(91, 116, 68,0.28)' : C.border}`,
               minHeight: 110,
             }}
           >

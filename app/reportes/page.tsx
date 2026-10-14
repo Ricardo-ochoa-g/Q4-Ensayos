@@ -7,9 +7,9 @@ const C = {
   canvas:  '#F0F2F6',
   card:    '#FFFFFF',
   border:  '#E2E8F0',
-  text:    '#0F1A2E',
+  text:    '#F3F1EA',
   textMt:  '#94A3B8',
-  orange:  '#E5501E',
+  orange:  '#5B7444',
   shadow:  '0 2px 10px rgba(0,0,0,0.07)',
 } as const
 

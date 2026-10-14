@@ -14,12 +14,12 @@ const C = {
   canvas:   '#F0F2F6',
   card:     '#FFFFFF',
   border:   '#E2E8F0',
-  text:     '#0F1A2E',
+  text:     '#F3F1EA',
   textSec:  '#64748B',
   textMt:   '#94A3B8',
-  orange:   '#E5501E',
+  orange:   '#5B7444',
   orangeL:  '#FFF5F2',
-  navy:     '#0F1A2E',
+  navy:     '#F3F1EA',
   blue:     '#0284C7',
   blueL:    '#EFF9FF',
   green:    '#16A34A',
@@ -154,7 +154,7 @@ function SummaryTable({ summary, totals }: { summary: ControlData['summary']; to
       ))}
 
       {/* Total row */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 8, padding: '14px 22px', background: '#162138' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 8, padding: '14px 22px', background: '#F8F6F0' }}>
         <span style={{ fontSize: 11, fontWeight: 800, color: '#A8B8D0', textTransform: 'uppercase', letterSpacing: '0.07em' }}>Total Q4</span>
         <span style={{ fontSize: 14, fontWeight: 800, color: '#93C5FD', fontVariantNumeric: 'tabular-nums', textAlign: 'right' }}>{fmtCLP(totals.facturado)}</span>
         <span style={{ fontSize: 14, fontWeight: 800, color: '#86EFAC', fontVariantNumeric: 'tabular-nums', textAlign: 'right' }}>{fmtCLP(totals.ingreso)}</span>
@@ -390,17 +390,17 @@ function MonthCard({ mes, month, edits, onSave, onDelete }: {
         <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
           <span style={{ fontSize: 16, fontWeight: 900, color: '#fff', textTransform: 'uppercase', letterSpacing: '0.07em' }}>{mes}</span>
           {hasEdits && !editing && (
-            <span style={{ fontSize: 9, background: 'rgba(255,255,255,0.2)', color: '#fff', borderRadius: 4, padding: '2px 7px', fontWeight: 700, letterSpacing: '0.05em' }}>EDITADO</span>
+            <span style={{ fontSize: 9, background: 'rgba(0, 0, 0,0.2)', color: '#fff', borderRadius: 4, padding: '2px 7px', fontWeight: 700, letterSpacing: '0.05em' }}>EDITADO</span>
           )}
           {!month && (
-            <span style={{ fontSize: 9, background: 'rgba(255,255,255,0.2)', color: '#fff', borderRadius: 4, padding: '2px 7px', fontWeight: 700 }}>NUEVO</span>
+            <span style={{ fontSize: 9, background: 'rgba(0, 0, 0,0.2)', color: '#fff', borderRadius: 4, padding: '2px 7px', fontWeight: 700 }}>NUEVO</span>
           )}
         </div>
         <div style={{ display: 'flex', gap: 8 }}>
           {editing ? (
             <>
               {month && (
-                <button onClick={cancel} style={{ fontSize: 11, padding: '5px 12px', borderRadius: 6, border: '1px solid rgba(255,255,255,0.3)', background: 'transparent', color: '#fff', cursor: 'pointer', fontWeight: 600 }}>
+                <button onClick={cancel} style={{ fontSize: 11, padding: '5px 12px', borderRadius: 6, border: '1px solid rgba(0, 0, 0,0.3)', background: 'transparent', color: '#fff', cursor: 'pointer', fontWeight: 600 }}>
                   Cancelar
                 </button>
               )}
@@ -411,11 +411,11 @@ function MonthCard({ mes, month, edits, onSave, onDelete }: {
           ) : (
             <>
               {onDelete && (
-                <button onClick={onDelete} style={{ fontSize: 11, padding: '5px 10px', borderRadius: 6, border: '1px solid rgba(255,255,255,0.3)', background: 'transparent', color: 'rgba(255,255,255,0.7)', cursor: 'pointer', fontWeight: 600 }}>
+                <button onClick={onDelete} style={{ fontSize: 11, padding: '5px 10px', borderRadius: 6, border: '1px solid rgba(0, 0, 0,0.3)', background: 'transparent', color: 'rgba(0, 0, 0,0.7)', cursor: 'pointer', fontWeight: 600 }}>
                   Eliminar
                 </button>
               )}
-              <button onClick={startEdit} style={{ fontSize: 11, padding: '5px 12px', borderRadius: 6, border: '1px solid rgba(255,255,255,0.3)', background: 'transparent', color: '#fff', cursor: 'pointer', fontWeight: 600, display: 'flex', alignItems: 'center', gap: 5 }}>
+              <button onClick={startEdit} style={{ fontSize: 11, padding: '5px 12px', borderRadius: 6, border: '1px solid rgba(0, 0, 0,0.3)', background: 'transparent', color: '#fff', cursor: 'pointer', fontWeight: 600, display: 'flex', alignItems: 'center', gap: 5 }}>
                 <span>✏</span> Editar
               </button>
             </>

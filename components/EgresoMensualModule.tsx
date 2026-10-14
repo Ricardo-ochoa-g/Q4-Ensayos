@@ -8,12 +8,12 @@ const C = {
   canvas:  '#F0F2F6',
   card:    '#FFFFFF',
   border:  '#E2E8F0',
-  text:    '#0F1A2E',
+  text:    '#F3F1EA',
   textSec: '#64748B',
   textMt:  '#94A3B8',
-  orange:  '#E5501E',
+  orange:  '#5B7444',
   orangeL: '#FFF5F2',
-  navy:    '#0F1A2E',
+  navy:    '#F3F1EA',
   green:   '#16A34A',
   greenL:  '#F0FDF4',
   warn:    '#CA8A04',
@@ -203,14 +203,14 @@ function MonthCard({ mes, edits, onSave, onDelete }: {
         <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
           <span style={{ fontSize: 16, fontWeight: 900, color: '#fff', textTransform: 'uppercase', letterSpacing: '0.07em' }}>{mes}</span>
           {!hasData && !editing && (
-            <span style={{ fontSize: 9, background: 'rgba(255,255,255,0.2)', color: '#fff', borderRadius: 4, padding: '2px 7px', fontWeight: 700 }}>NUEVO</span>
+            <span style={{ fontSize: 9, background: 'rgba(0, 0, 0,0.2)', color: '#fff', borderRadius: 4, padding: '2px 7px', fontWeight: 700 }}>NUEVO</span>
           )}
         </div>
         <div style={{ display: 'flex', gap: 8 }}>
           {editing ? (
             <>
               {hasData && (
-                <button onClick={() => { setDraft(null); setEditing(false) }} style={{ fontSize: 11, padding: '5px 12px', borderRadius: 6, border: '1px solid rgba(255,255,255,0.3)', background: 'transparent', color: '#fff', cursor: 'pointer', fontWeight: 600 }}>
+                <button onClick={() => { setDraft(null); setEditing(false) }} style={{ fontSize: 11, padding: '5px 12px', borderRadius: 6, border: '1px solid rgba(0, 0, 0,0.3)', background: 'transparent', color: '#fff', cursor: 'pointer', fontWeight: 600 }}>
                   Cancelar
                 </button>
               )}
@@ -220,10 +220,10 @@ function MonthCard({ mes, edits, onSave, onDelete }: {
             </>
           ) : (
             <>
-              <button onClick={onDelete} style={{ fontSize: 11, padding: '5px 10px', borderRadius: 6, border: '1px solid rgba(255,255,255,0.3)', background: 'transparent', color: 'rgba(255,255,255,0.7)', cursor: 'pointer', fontWeight: 600 }}>
+              <button onClick={onDelete} style={{ fontSize: 11, padding: '5px 10px', borderRadius: 6, border: '1px solid rgba(0, 0, 0,0.3)', background: 'transparent', color: 'rgba(0, 0, 0,0.7)', cursor: 'pointer', fontWeight: 600 }}>
                 Eliminar
               </button>
-              <button onClick={startEdit} style={{ fontSize: 11, padding: '5px 12px', borderRadius: 6, border: '1px solid rgba(255,255,255,0.3)', background: 'transparent', color: '#fff', cursor: 'pointer', fontWeight: 600, display: 'flex', alignItems: 'center', gap: 5 }}>
+              <button onClick={startEdit} style={{ fontSize: 11, padding: '5px 12px', borderRadius: 6, border: '1px solid rgba(0, 0, 0,0.3)', background: 'transparent', color: '#fff', cursor: 'pointer', fontWeight: 600, display: 'flex', alignItems: 'center', gap: 5 }}>
                 <span>✏</span> Editar
               </button>
             </>
@@ -434,8 +434,8 @@ export function EgresoMensualModule() {
         {extraMonths.length > 0 && (
           <div style={{ background: C.navy, borderRadius: 14, boxShadow: C.shadow, overflow: 'hidden', marginBottom: 28 }}>
             {/* Table header */}
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', padding: '10px 20px', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
-              <span style={{ fontSize: 10, fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'rgba(255,255,255,0.45)' }}>MES</span>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', padding: '10px 20px', borderBottom: '1px solid rgba(0, 0, 0,0.08)' }}>
+              <span style={{ fontSize: 10, fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'rgba(0, 0, 0,0.45)' }}>MES</span>
               <span style={{ fontSize: 10, fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#4ADE80', textAlign: 'right' }}>EGRESO PAGADO</span>
             </div>
             {/* Rows */}
@@ -445,19 +445,19 @@ export function EgresoMensualModule() {
                 <div key={mes} style={{
                   display: 'grid', gridTemplateColumns: '1fr auto',
                   padding: '11px 20px',
-                  borderBottom: i < extraMonths.length - 1 ? '1px solid rgba(255,255,255,0.05)' : 'none',
-                  background: i % 2 === 0 ? 'transparent' : 'rgba(255,255,255,0.025)',
+                  borderBottom: i < extraMonths.length - 1 ? '1px solid rgba(0, 0, 0,0.05)' : 'none',
+                  background: i % 2 === 0 ? 'transparent' : 'rgba(0, 0, 0,0.025)',
                 }}>
-                  <span style={{ fontSize: 13, fontWeight: 500, color: '#F0EDE8' }}>{mes}</span>
-                  <span style={{ fontSize: 13, fontWeight: 600, color: pagado > 0 ? '#4ADE80' : 'rgba(255,255,255,0.25)', fontVariantNumeric: 'tabular-nums' }}>
+                  <span style={{ fontSize: 13, fontWeight: 500, color: '#2B2F24' }}>{mes}</span>
+                  <span style={{ fontSize: 13, fontWeight: 600, color: pagado > 0 ? '#4ADE80' : 'rgba(0, 0, 0,0.25)', fontVariantNumeric: 'tabular-nums' }}>
                     {pagado > 0 ? fmtCLP(pagado) : '—'}
                   </span>
                 </div>
               )
             })}
             {/* Total footer */}
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', padding: '12px 20px', background: 'rgba(255,255,255,0.06)', borderTop: '1px solid rgba(255,255,255,0.10)' }}>
-              <span style={{ fontSize: 12, fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'rgba(255,255,255,0.6)' }}>TOTAL Q4</span>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', padding: '12px 20px', background: 'rgba(0, 0, 0,0.06)', borderTop: '1px solid rgba(0, 0, 0,0.10)' }}>
+              <span style={{ fontSize: 12, fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'rgba(0, 0, 0,0.6)' }}>TOTAL Q4</span>
               <span style={{ fontSize: 15, fontWeight: 900, color: '#4ADE80', fontVariantNumeric: 'tabular-nums' }}>{fmtCLP(totalPag || null)}</span>
             </div>
           </div>

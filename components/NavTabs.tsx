@@ -4,9 +4,9 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 const C = {
-  orange:    '#E5501E',
-  primary:   '#F0EDE8',
-  secondary: '#8A9BB8',
+  orange:    '#5B7444',
+  primary:   '#2B2F24',
+  secondary: '#5C6B52',
 } as const
 
 const TABS = [

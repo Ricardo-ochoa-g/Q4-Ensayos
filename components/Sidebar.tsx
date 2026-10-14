@@ -9,13 +9,13 @@ import { useIsMobile } from '@/hooks/useIsMobile'
 export const SIDEBAR_W = 240
 
 const C = {
-  bg:      '#0F1A2E',
-  active:  'rgba(229, 80, 30, 0.13)',
-  border:  '#E5501E',
-  text:    '#F0EDE8',
-  dim:     '#8A9BB8',
-  muted:   '#5A7090',
-  divider: 'rgba(255,255,255,0.07)',
+  bg:      '#F3F1EA',
+  active:  'rgba(91, 116, 68, 0.13)',
+  border:  '#5B7444',
+  text:    '#2B2F24',
+  dim:     '#5C6B52',
+  muted:   '#9AA38D',
+  divider: 'rgba(0, 0, 0,0.07)',
 } as const
 
 const MODULES = [
@@ -176,7 +176,7 @@ export function Sidebar() {
           marginBottom: 10,
           padding: '8px 10px',
           borderRadius: 7,
-          background: 'rgba(255,255,255,0.04)',
+          background: 'rgba(0, 0, 0,0.04)',
           border: `1px solid ${C.divider}`,
         }}>
           <div style={{
